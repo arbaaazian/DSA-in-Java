@@ -1,0 +1,40 @@
+package com.solution;
+
+
+class Solution {
+	
+	
+	 public static int findLargest(int arr[]){
+		 
+		int large = Integer.MIN_VALUE;
+		int second = Integer.MIN_VALUE;
+		
+		for(int num : arr)
+			
+			if(num > large) {
+				
+				second = large;
+				large = num;
+	
+			}
+		
+			else if (num > second && num < large) {
+				
+				  second = num;
+			}
+		
+		return second;
+		
+		 
+		 }
+		 public static void main(String[] args) {
+			 
+			 int arr[] = {4,2,7,1,8,3};
+			
+			 int findLargest = findLargest(arr);
+			 
+			 System.out.println(findLargest);
+			 
+		}
+    
+}
