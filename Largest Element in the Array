@@ -1,0 +1,59 @@
+class Solution {
+	
+	
+	 public static int findLargest(int arr[]){
+		 
+		 int max = arr[0];
+		 
+		 for(int i = 1 ; i<arr.length ; i++){
+		   if(arr[i] >= max){
+		      
+			  max = arr[i];
+		   }
+		 
+		 }
+		      return max;
+		 
+		 }
+		 public static void main(String[] args) {
+			 
+			 int arr[] = {4,2,7,1,8,3};
+			
+			 int findLargest = findLargest(arr);
+			 
+			 System.out.println(findLargest);
+			 
+		}
+    
+}
+
+						=============
+						   By Java8
+						============
+
+
+
+
+
+
+class Solution {
+	
+	
+	 public static int findLargest(int arr[]){
+		 
+		
+		 return Arrays.stream(arr).max().getAsInt();
+		 
+		 
+		 }
+		 public static void main(String[] args) {
+			 
+			 int arr[] = {4,2,7,1,8,3};
+			
+			 int findLargest = findLargest(arr);
+			 
+			 System.out.println(findLargest);
+			 
+		}
+    
+}
