@@ -1,0 +1,76 @@
+======================
+TWO Pointer Approach
+====================
+
+
+class Solution {
+	
+	public static int removeDuplicate(int[] arr) {
+		
+		Arrays.sort(arr);
+		
+		int j = 0;
+		
+		for(int i = 1; i<arr.length;i++) {
+			
+			if(arr[i] != arr[j]) {
+				
+				j++;
+				arr[j] = arr[i];
+			}
+			
+		}
+		
+		return j + 1;
+		
+			
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		int [] arr = {3,4,5,1,8,3,5,1,2};
+		
+		
+		int newlength = removeDuplicate(arr);
+		
+		System.out.println(Arrays.toString(Arrays.copyOf(arr, newlength)));
+	
+		
+	}
+    
+}
+
+
+
+======================
+     Hash SET
+====================
+
+
+public class RemoveDuplicates {
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {12,44,17,8,9,3,17,26,44};
+		
+		removeDuplicate(arr);
+	}
+	
+	public static void removeDuplicate(int[] num) {
+		
+		HashSet<Integer> set = new HashSet<>();
+		
+		for(int n : num) {
+			
+			if(set.add(n)) {
+				
+				System.out.print(n + ",");
+			}
+		}
+		
+	}
+
+}
+
+
