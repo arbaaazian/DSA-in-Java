@@ -1,0 +1,24 @@
+=======XOR Approach===========
+
+public class Solution {
+    public static int missingNumber(int []a, int N) {
+       
+       int totalXOR = 0;
+       int arrayXOR = 0;
+       
+       for(int i = 1 ; i<=N;i++){
+
+           totalXOR ^= i;
+       }
+
+       for(int num : a){
+
+           arrayXOR ^= num;
+       }
+
+       return totalXOR ^ arrayXOR;
+   
+       
+
+    }
+}
